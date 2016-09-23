@@ -166,7 +166,7 @@ public class MiHTTP<E> implements Callable<E> {
 						String contentType = sender.getContentType();
 						if(contentType != null) http.addRequestProperty("Content-Type", contentType);
 						int contentLength = sender.getContentLength();
-						if(contentLength >= 0) http.setFixedLengthStreamingMode(contentLength);
+						if(contentLength > 0) http.setFixedLengthStreamingMode(contentLength);
 
 						OutputStream body = null;
 						try {
