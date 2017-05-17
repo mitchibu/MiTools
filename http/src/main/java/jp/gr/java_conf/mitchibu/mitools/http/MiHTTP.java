@@ -29,7 +29,11 @@ public class MiHTTP<E> implements Callable<E> {
 
 	public enum Method {
 		GET,
-		POST
+		POST,
+		PUT,
+		DELETE,
+		PATCH,
+		HEAD,
 	}
 
 	private final String url;
